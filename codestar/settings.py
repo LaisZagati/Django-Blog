@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-32l5$58(!ely89ri0!*=^yznkz)gnejp=ps789va0r!=z&4n3+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django_blog.onrender.com', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'django_blog.onrender.com']
 
 
 # Application definition
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'blog',
+    'pghero',
 ]
 
 MIDDLEWARE = [
@@ -127,7 +128,22 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dran595pk',
+    'API_KEY': '785893614844633',
+    'API_SECRET': 'pnaLwItOoeV_dAGB6XNvVKUREZk',
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# settings.py
+
+# Disable PgHero basic authentication
+PGHERO_BASIC_AUTH = None
+
