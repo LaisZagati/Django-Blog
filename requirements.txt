@@ -6,6 +6,7 @@ cloudinary==1.41.0
 Django==5.1.4
 django-allauth==65.3.0
 django-cloudinary-storage==0.3.0
+django-crispy-forms==2.3
 django-summernote==0.8.20.0
 idna==3.10
 pghero==0.0.4
